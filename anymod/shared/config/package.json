@@ -1,5 +1,9 @@
 {
   "name": "@anymod/config",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "exports": {
+    "./eslint.config.mjs": "./eslint.config.mjs",
+    "./prettier.config.mjs": "./prettier.config.mjs"
+  }
 }

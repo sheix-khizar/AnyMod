@@ -5,7 +5,13 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "dependencies": {
-    "@anymod/types": "workspace:*"
+    "@anymod/types": "workspace:*",
+    "groq-sdk": "*",
+    "tiktoken": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "vitest": "*"
   },
   "scripts": {
     "build": "tsc -b",
