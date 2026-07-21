@@ -1,4 +1,4 @@
-# AnyMod — Software Requirements Specification & Architecture Documen
+# AnyMod — Software Requirements Specification & Architecture Document
 
 **AI-Powered VS Code Coding Assistant with Bring Your Own API Key (BYOK)**
 
