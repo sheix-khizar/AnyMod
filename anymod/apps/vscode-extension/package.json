@@ -1,0 +1,22 @@
+{
+  "name": "@anymod/vscode-extension",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/extension.js",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "dependencies": {
+    "@anymod/core": "workspace:*",
+    "@anymod/providers": "workspace:*",
+    "@anymod/types": "workspace:*"
+  },
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "test": "vitest run",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}
