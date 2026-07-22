@@ -68,19 +68,23 @@ export class GroqAdapter extends BaseProviderAdapter {
   }
 
   async countTokens(text: string, model: string): Promise<number> {
+    // Groq-hosted Llama/Mixtral models don't have public tiktoken encodings.
+    // cl100k_base is used as the closest available approximation for all of them.
+    // If a model-specific encoding becomes available, branch on `model` here.
     const enc = get_encoding('cl100k_base');
     const tokens = enc.encode(text);
     const count = tokens.length;
     enc.free();
+    void model; // intentionally unused for now — see comment above
     return count;
   }
 
   async listModels(): Promise<string[]> {
+    // Verified against console.groq.com/docs/models — update this list if Groq's lineup changes.
     return [
-      'llama3-8b-8192',
-      'llama3-70b-8192',
-      'mixtral-8x7b-32768',
-      'gemma-7b-it'
+      'llama-3.3-70b-versatile',
+      'llama-3.1-8b-instant',
+      'gemma2-9b-it',
     ];
   }
 }

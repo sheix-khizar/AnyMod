@@ -13,9 +13,9 @@
     "lint": "turbo run lint"
   },
   "devDependencies": {
-    "turbo": "^2.10.5",
-    "typescript": "^7.0.2",
-    "vite": "^8.1.5",
-    "vitest": "^4.1.10"
+    "turbo": "2.10.5",
+    "typescript": "7.0.2",
+    "vite": "8.1.5",
+    "vitest": "4.1.10"
   }
 }

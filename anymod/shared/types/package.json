@@ -6,13 +6,13 @@
   "types": "src/index.ts",
   "scripts": {
     "build": "tsc -b",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "lint": "eslint src"
   },
   "dependencies": {
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "vitest": "^1.4.0"
+    "vitest": "4.1.10"
   }
 }

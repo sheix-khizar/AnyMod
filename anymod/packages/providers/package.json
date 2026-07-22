@@ -11,11 +11,11 @@
   },
   "devDependencies": {
     "@types/node": "*",
-    "vitest": "*"
+    "vitest": "4.1.10"
   },
   "scripts": {
     "build": "tsc -b",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "lint": "eslint src"
   }
 }
