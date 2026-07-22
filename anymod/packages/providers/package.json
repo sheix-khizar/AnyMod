@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@types/node": "*",
+    "dotenv": "^17.4.2",
     "vitest": "4.1.10"
   },
   "scripts": {

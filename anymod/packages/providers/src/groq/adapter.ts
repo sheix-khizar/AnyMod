@@ -43,21 +43,21 @@ export class GroqAdapter extends BaseProviderAdapter {
 
       for await (const chunk of stream) {
         const delta = chunk.choices[0]?.delta;
-        
+
         if (delta?.content) {
           onEvent({ type: 'text-delta', text: delta.content });
         }
-        
+
         if (delta?.tool_calls?.length) {
           for (const tc of delta.tool_calls) {
-             onEvent({
-               type: 'tool-call',
-               toolCall: {
-                 id: tc.id || 'unknown',
-                 name: tc.function?.name || '',
-                 arguments: tc.function?.arguments ? JSON.parse(tc.function.arguments) : {}
-               }
-             });
+            onEvent({
+              type: 'tool-call',
+              toolCall: {
+                id: tc.id || 'unknown',
+                name: tc.function?.name || '',
+                arguments: tc.function?.arguments ? JSON.parse(tc.function.arguments) : {}
+              }
+            });
           }
         }
       }
